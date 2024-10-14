@@ -12,6 +12,7 @@
   "dependencies": {
     "flowbite": "^2.5.2",
     "flowbite-react": "^0.10.2",
+    "sass-embedded": "^1.79.5",
     "pinata": "^1.5.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
