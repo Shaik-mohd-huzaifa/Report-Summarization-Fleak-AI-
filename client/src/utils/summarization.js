@@ -9,10 +9,9 @@ export const summarizeReports = async (file_id, language, summary_type) =>
       },
       body: JSON.stringify([
         {
-          file_id:
-            "bafybeicib2opcoodmixs7fvjnxa2poltg27ep7dnv4cnas47l2qvytzlgy",
-          language: "English",
-          summary_type: "nutrition suggestion",
+          file_id: file_id,
+          language: language,
+          summary_type: summary_type,
         },
       ]),
     },
