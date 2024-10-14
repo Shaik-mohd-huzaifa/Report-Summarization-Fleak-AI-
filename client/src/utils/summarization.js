@@ -4,7 +4,7 @@ export const summarizeReports = async (file_id, language, summary_type) =>
     {
       method: "POST",
       headers: {
-        "api-key": import.meta.env.VITE_PINATA_JWT,
+        "api-key": import.meta.env.FLEAK_API_KEY,
         "Content-Type": "application/json",
       },
       body: JSON.stringify([
