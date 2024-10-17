@@ -22,8 +22,7 @@ function ReportSummarization() {
 
   const handleSubmission = async () => {
     try {
-      const upload = await uploadFile(selectedFile, selectedFile.name);
-      // const file_id = upload.cid; // Use 'const' for the variable
+      await uploadFile(selectedFile, selectedFile.name);
       console.log("File Uploaded, Summarizating....");
       const data = await summarizeReports(
         selectedFile.name,
