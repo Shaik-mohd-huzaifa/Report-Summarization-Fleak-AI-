@@ -18,5 +18,5 @@ export const summarizeReports = async (file_name, language, summary_type) =>
     },
   )
     .then((response) => response.json())
-    .then((data) => data.outputEvents[0].choices[0].message.content)
+    .then((data) => data.message.content)
     .catch((error) => console.error("Error:", error));
