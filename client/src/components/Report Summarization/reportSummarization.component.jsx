@@ -4,6 +4,7 @@ import { languages, types } from "./../../assets/data/data";
 import "./reportSummarization.styles.scss";
 import Markdown from "react-markdown";
 import { summarizeReports } from "../../utils/summarization";
+import uploadFile from "../../utils/fileupload";
 
 const initial_option_state = {
   language: "",
@@ -21,11 +22,11 @@ function ReportSummarization() {
 
   const handleSubmission = async () => {
     try {
-      const upload = await pinata.upload.file(selectedFile);
-      const file_id = upload.cid; // Use 'const' for the variable
+      const upload = await uploadFile(selectedFile, selectedFile.name);
+      // const file_id = upload.cid; // Use 'const' for the variable
       console.log("File Uploaded, Summarizating....");
       const data = await summarizeReports(
-        file_id,
+        selectedFile.name,
         inputData.language,
         inputData.summary_type,
       ); // Await the async call
